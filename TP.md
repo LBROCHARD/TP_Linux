@@ -103,6 +103,24 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
  ***⚠️❗️ EST CE QU'IL FAUT UTILISER CA ? : ```apt-get install phpmyadmin``` ❗️⚠️***
  
  ### Installation du GLPI :
+ 
+ Maintenant que le terrain est préparé, il est temps d'installer le GLPI, pour se faire, on se déplace vers le fichier src grâce à cette commande : 
+ 
+ ```cd /usr/src/ ```
+ 
+ Puis on vas chercher le glpi avec wget (qui permet de télécharger des fichiers depuis internet) :
+ 
+ ```wget https://github.com/glpi-project/glpi/releases/download/9.3.3/glpi-9.3.3.tgz```
+ 
+ On décompresse avec tar :
+ 
+ ``` tar -xvzf glpi-9.3.3.tgz -C /var/www/html ```
+ 
+ Et on cède les droits :
+ 
+ ```chown -R www-data /var/www/html/glpi/```
+ 
+ ***⚠️❗️ EST CE QU'ON FERAIT PAS UNE CATEGORIE POUR INSTALLATION GLPI ET UNE AUTRE POUR LA CONFIGURATION ? ❗️⚠️***
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
