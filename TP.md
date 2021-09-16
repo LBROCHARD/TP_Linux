@@ -40,3 +40,9 @@ Sur le réseau du téléphone :
 Sur le réseau d'Ynov :
 ![sur le reseau d'Ynov](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection%20no.png) 
 ![sur le reseau d'Ynov](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection%20echec.png) 
+
+## Configuration de l'outil de gestion de ticket
+
+## Ajout d'un plugin de remonté de poste client
+
+## Mise en place d'une sauvegarde du GLPI
