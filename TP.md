@@ -24,4 +24,8 @@ Leur mise en place est assez simple, on télécharge simplement des iso des diff
 
 ## Configuration des services réseaux
 
-Par défaut sur VMware le réseau est en mode NAT, c'est à dire que le réseau de la machine virtuelle, agit comme si il s'agissait du réseau de l'ordinateur hôte
+Par défaut sur VMware le réseau est en mode NAT, c'est à dire que le réseau de la machine virtuelle, agit comme si il s'agissait du réseau de l'ordinateur hôte.
+Il conviens donc de passer le réseau en "Bridged" (réseau par pont) qui permet à la machine virtuelle d'agir comme si elle était une machine à part entière sur le même réseau que l'hôte, ce qui vas nous permettre de simuler un réseau dans lequel avec un ordinateur serveur (la VM débian) et un ordinateur client (la VM windows).
+Pour ce faire, il suffit d'aller dans les réglages de la machine virtuelle, et de mofifier dans "Network Adaptater" le réseau de "NAT" à "Bridged" comme ci-dessous :
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/001%20passage%20de%20la%20debian%20en%20bridge.png)
+Un soucis rencontré fut la présence d'une sécurité dur le réseau d'Ynov, qui empechait au reseau de fonctionner sur une machine virtuelle configuré en bridged, pour le régler, nous nous sommes connecté au réseau d'un téléphone.
