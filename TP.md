@@ -24,4 +24,4 @@ Leur mise en place est assez simple, on télécharge simplement des iso des diff
 
 ## Configuration des services réseaux
 
-Par défaut sur VMware le réseau est en mode NAT, c'est à dire que le réseau de la machine virtuelle, agit comme si il s'agissait du réseau de l'ordinateur hôte 
+Par défaut sur VMware le réseau est en mode NAT, c'est à dire que le réseau de la machine virtuelle, agit comme si il s'agissait du réseau de l'ordinateur hôte
