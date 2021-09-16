@@ -15,12 +15,15 @@
 
 Le but de ce TP est la mise en place d'un parc informatique et d'un logiciel de ticketing pour permettre à la société **InforM** d'effectuer sa tâche de formation et d'entretien du materiel pour leurs clients.
 Nous allons donc mettre un place un serveur GLPI qui vas permettre à la société de faire ces deux choses en même temps et sur un seul outil.
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202021-09-16%20155218.png)
 
 ## Mise en place des machines virtuelles
 
 La Première étape est l'étape d'installation des VM (car il s'agit d'un TP), dans notre cas, on a besoin d'une machine sous Linux pour habriter le serveur GLPI, et d'une machine sous Windows pour émuler la machine d'un client. 
 Pour la machine Linux, on vas utiliser un Debian 11, et pour la machine client, on vas simplement utiliser un windows 10. 
 Leur mise en place est assez simple, on télécharge simplement des iso des different systèmes pour les installer sur VM ware, c'est une étape que l'on ne vas pas détailler.
+![Machine Debian](https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png)
+![Machine Windows]()
 
 ## Configuration des services réseaux
 
@@ -29,3 +32,9 @@ Il conviens donc de passer le réseau en "Bridged" (réseau par pont) qui permet
 Pour ce faire, il suffit d'aller dans les réglages de la machine virtuelle, et de mofifier dans "Network Adaptater" le réseau de "NAT" à "Bridged" comme ci-dessous :
 ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/001%20passage%20de%20la%20debian%20en%20bridge.png)
 Un soucis rencontré fut la présence d'une sécurité dur le réseau d'Ynov, qui empechait au reseau de fonctionner sur une machine virtuelle configuré en bridged, pour le régler, nous nous sommes connecté au réseau d'un téléphone.
+
+Sur le réseau du téléphone :
+![sur le reseau du téléphone]()
+Sur le réseau d'Ynov :
+![sur le reseau d'Ynov]() 
+![sur le reseau d'Ynov]() 
