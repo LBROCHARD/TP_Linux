@@ -53,7 +53,7 @@ Sur le réseau d'Ynov :
 
 Maintenant que les machines virtuels sonts configurées, il est temps d'installer l'outil de gestion de ticket.
 
-# Installations :
+### Installations :
 
 Pour ce faire, il y a d'abord quelques installation préliminaires à prevoir :
 
@@ -85,7 +85,7 @@ Et redémarrer les services d'Apache et de MariaDB en renseignant l'emplacement 
 ```/etc/init.d/apache2 restart```
 ```/etc/init.d/mysql restart ```
 
-# Création de la base de données :
+### Création de la base de données :
 
 L'étape suivante est d'entrer dans MariaDB afin de créer la base de donné.
 
@@ -102,7 +102,7 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
 
  ***⚠️❗️ EST CE QU'IL FAUT UTILISER CA ? : ```apt-get install phpmyadmin``` ❗️⚠️***
  
- # Installation du GLPI :
+ ### Installation du GLPI :
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
