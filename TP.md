@@ -34,12 +34,16 @@ Par défaut sur VMware le réseau est en mode NAT, c'est à dire que le réseau 
 Il conviens donc de passer le réseau en "Bridged" (réseau par pont) qui permet à la machine virtuelle d'agir comme si elle était une machine à part entière sur le même réseau que l'hôte, ce qui vas nous permettre de simuler un réseau avec un ordinateur serveur (la VM débian) et un ordinateur client (la VM windows).
 Pour ce faire, il suffit d'aller dans les réglages de la machine virtuelle, et de modifier dans "Network Adaptater" le réseau de "NAT" à "Bridged" comme ci-dessous :
 ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/001%20passage%20de%20la%20debian%20en%20bridge.png)
-Un soucis rencontré fut la présence d'une sécurité dur le réseau d'Ynov, qui empechait au reseau de fonctionner sur une machine virtuelle configuré en bridged, pour le régler, nous nous sommes connecté au réseau d'un téléphone.
+Un soucis rencontré fut la présence d'une sécurité sur le réseau d'Ynov, qui empechait au reseau de fonctionner sur une machine virtuelle configuré en bridged, pour le régler, nous nous sommes connecté au réseau d'un téléphone.
 
 Sur le réseau du téléphone :
+
 ![sur le reseau du téléphone](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection.png)
+
 Sur le réseau d'Ynov :
+
 ![sur le reseau d'Ynov](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection%20no.png) 
+
 ![sur le reseau d'Ynov](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection%20echec.png) 
 
 ## Configuration de l'outil de gestion de ticket
