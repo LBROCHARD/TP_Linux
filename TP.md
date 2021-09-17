@@ -1,7 +1,6 @@
 # TP Linux n°1
 
-🔵🔵***⚠️❗️ METTRE UNE PHOTO POUR FAIRE LA PAGE DE GARDE ❗️⚠️***
-![]()
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/tp%20linux.png)
 
 ## Sommaire
 
