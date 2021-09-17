@@ -99,9 +99,6 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
 ⚠️Ici on cède les privilèges à l'utilisateur, il faut donc remplacer les 3 petits points par un mot de passe
 
 ⚠️On utilise ```quit``` pour quitter MariaDB
-
-
- 🔵🔵***⚠️❗️ EST CE QU'IL FAUT UTILISER CA ? : ```apt-get install phpmyadmin``` ❗️⚠️***
  
  ### Installation du GLPI :
  
@@ -197,12 +194,18 @@ Maintenant, la base de donée à été supprimé, mais si vous recréez votre ba
 
 Boom ! Tout beau tout propre. Vous pouvez désormais recréer votre base de donné en faisant `mysql` pour entreer dans MariaDB puis refaites un base de donnée comme à [cette étape]() et reprendre à partir d'[ici]().
 
-### Accès au GLPI :
+### Création utilisateur :
 
 ***📸❗️ capture d'ecran de la connexion qu glpi ❗️📸***
 
 Vous pouvez maintenant vous connecter au glpi avec l'utilisateur par défaut,  
 utilisez glpi comme identifiant et comme mot de passe.
+
+⚠️Mais comme vous pouvez vous en douter, cet utilisateur n'est pas du tout sécurisé, il est donc important de se rendre dans *Administration*, puis *Utilisateurs*.
+
+***📸❗️ capture d'ecran utilisateurs ❗️📸***
+
+Et il faut maintenant remplacer l'utilisateur *glpi* par un utilisateur avec un mot de passe sécurisé.
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
