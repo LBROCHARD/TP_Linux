@@ -206,9 +206,13 @@ Tout d'abord, il faut installer le FusionInventory, pour ce faire, on met à jou
 
 Et on télécharge le fusion inventory de la même manière que pour le GLPI :
 
+
 `cd /usr/src `
+
 `wget https://github.com/fusioninventory/fusioninventory-for-glpi/archive/glpi9.3+1.3.tar.gz `
+
 `tar -zxvf glpi9.3+1.3.tar.gz -C /var/www/html/glpi/plugins  `
+
 
 On lui attribue les droits :
 
@@ -216,7 +220,9 @@ On lui attribue les droits :
 
 Et on prépare la compatibilité du repertoire :
 
+
 `cd /var/www/html/glpi/plugins `
+
 `mv fusioninventory-for-glpi-glpi9.3-1.3/ fusioninventory/ ` 
 
 ### Installation sur l'interface web :
@@ -292,8 +298,17 @@ Appuyez sur *Installer* et une fois que c'est fait, appuyez sur *Suivant* pour f
 
 ### Vérification de l'installation : 
 
+Nous allons maintenant vérifier qu'un lien c'est bien créé entre l'agent et le GLPI. Sur votre machine client, ouvrez un navigateur internet et rentrez l'adresse : **http://localhost:62354**, cela vas vous ouvrir une page qui doit ressembler à cela : 
 
+***📸❗️ capture d'ecran agent page web ❗️📸***
 
+Verifiez que tout est correct et cliquez sur *Force an Inventory*.
+
+Retournez maintenant sur votre interface GLPI, et rendez vous dans *Administration*, puis *Fusion Inventory*, et dans le sous-menu *Général*, puis *Gestion des Agents*
+
+Vous devriez alors voir appraitre votre machine cliente dans la liste :
+
+***📸❗️ capture d'ecran machine cliente dans la liste ❗️📸***
 
 
 
