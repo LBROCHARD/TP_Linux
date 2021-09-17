@@ -193,7 +193,7 @@ Maintenant, la base de donée à été supprimé, mais si vous recréez votre ba
 
 ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20langue.png)
 
-Boom ! Tout beau tout propre. Vous pouvez désormais recréer votre base de donné en faisant `mysql` pour entreer dans MariaDB puis refaites un base de donnée comme à [cette étape]() et reprendre à partir d'[ici]().
+Boom ! Tout beau tout propre. Vous pouvez désormais recréer votre base de donné en faisant `mysql` pour entreer dans MariaDB puis refaites un base de donnée comme à [cette étape](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#cr%C3%A9ation-de-la-base-de-donn%C3%A9es-) et reprendre à partir d'[ici]().
 
 ### Création utilisateur :
 
