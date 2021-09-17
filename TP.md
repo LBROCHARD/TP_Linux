@@ -4,13 +4,13 @@
 
 ## Sommaire
 
-- ### [Introduction](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#introduction-1)
-- ### [Mise en place des machines virtuelles](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-des-machines-virtuelles-1)
-- ### [Configuration des services réseaux](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-des-services-r%C3%A9seaux-1)
-- ### [Installation de l'outil de gestion de ticket](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-de-loutil-de-gestion-de-ticket-1)
-- ### [Configuration de l'outil de gestion de ticket]()
-- ### [Ajout d'un plugin de remonté de poste client](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#ajout-dun-plugin-de-remont%C3%A9-de-poste-client-1)
-- ### [Mise en place d'une sauvegarde du GLPI](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-dune-sauvegarde-du-glpi-1)
+- ### [Introduction](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#introduction-)
+- ### [Mise en place des machines virtuelles](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-des-machines-virtuelles-)
+- ### [Configuration des services réseaux](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-des-services-r%C3%A9seaux-)
+- ### [Installation de l'outil de gestion de ticket](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#installation-de-loutil-de-gestion-de-ticket-)
+- ### [Configuration de l'outil de gestion de ticket](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-de-loutil-de-gestion-de-ticket-)
+- ### [Ajout d'un plugin de remonté de poste client](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#ajout-dun-plugin-de-remont%C3%A9-de-poste-client-)
+- ### [Mise en place d'une sauvegarde du GLPI](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-dune-sauvegarde-du-glpi-)
 
 ## Introduction 👋
 
