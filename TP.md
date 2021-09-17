@@ -327,7 +327,18 @@ Vous devriez alors voir apparaître votre machine cliente dans la liste :
 
 
 
+## Conclusion et axes d'améliorations :
 
+Durant ce TP nous avons mis en place et configurés (notamment le réseau) plusieurs VM, puis nous avons appris à installer et à utiliser un système de ticketing et d'inventaire de parc sur plusieurs appareils.
+
+Quelques difficultés furent rencontrées :
+- l'absence de bases solides en réseau à cause des cours de l'année dernière (qui furent rattrapé sur ce TP)
+- La difficulté de l'apprentissage d'un nouvel outil dont je n'avais jamais entendu parler
+- La complexité de l'outil
+- Et quelques bugs (notamment durant l'installation de la VM, mais qui furent surpassées)
+
+Comme axes d'améliorations, je pourrais notamment essayer d'aller creuser certaines commandes compliquées pour essayer de comprendre leur fonctionnement plutôt que de me contenter de suivre un tutoriel.
+Et il m'a également manqué quelques screens oubliées durant le TP ce qui m'a obligé à en refaire une grande partie.
 
 
 
