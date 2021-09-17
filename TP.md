@@ -195,7 +195,7 @@ Maintenant, la base de donée à été supprimé, mais si vous recréez votre ba
 
 ***📸❗️ capture d'ecran glpi setup langue❗️📸***
 
-Boom ! Tout beau tout propre. Vous pouvez désormais reprendre à partir d'[ici]()
+Boom ! Tout beau tout propre. Vous pouvez désormais recréer votre base de donné en faisant `mysql` pour entreer dans MariaDB puis refaites un base de donnée comme à [cette étape]() et reprendre à partir d'[ici]().
 
 ### Accès au GLPI :
 
