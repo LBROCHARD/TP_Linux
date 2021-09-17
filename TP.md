@@ -180,13 +180,22 @@ On vas maintenant vous demandez si vous voulez ou non transmettre des donées à
 
 L'installation est maintenant terminée, vous pouvez cliquez sur Utilisez GLPI et passer à l'étape suivante.
 
-### ⚠️ Recomencer l'instalation de la base de donnée :
+### (⚠️) Recomencer l'instalation de la base de donnée :
 
 ⚠️ Si vous avez rencontré un problème durant l'étape d'installation et de configuration de la base de données, il est possible de de la réinstaller, sinon, sautez cette étape.
 
 Durant le TP, nous avons corrompus la base de données, mais nous avons réussis à la supprimer proprement pour la réinstaller.
 
-🔵🔵***⚠️❗ FINIR çA ❗️⚠️***
+Pour supprimer la base de donnée, rendez vous sur le terminal de votre machine Linux, (en root) et entrez dans MariaDB grâce à la commande `mysql`, puis executez la commande suivante : `DROP DATABASE glpidb;`, ce qui vas supprimer la base de donnée.  ⚠️ ici glpidb est le nom de ma database, il ne s'agit pas forcément toujours de celui-ci.
+Si vous relancez votre page GLPI maintenant, vous allez avoir le message suivant :
+
+***📸❗️ capture d'ecran glpi erreur glpi❗️📸***
+
+Maintenant, la base de donée à été supprimé, mais si vous recréez votre base de donnée maintenant, cela ne vas pas vous permettre de la reconfigurer, à cause du fichier *config_db.php* qui retient la configuration. Pour reconfigurer votre DB il vous faut donc supprimer ce fichier, que l'on peut trouver en faisant `cd /var/www/html/glpi/config` vous pouvez maintenant supprimer le fichier problématique avec `rm config_db.php`, et si vous retournez sur votre page GLPI :
+
+***📸❗️ capture d'ecran glpi setup langue❗️📸***
+
+Boom ! Tout beau tout propre. Vous pouvez désormais reprendre à partir d'[ici]()
 
 ### Accès au GLPI :
 
