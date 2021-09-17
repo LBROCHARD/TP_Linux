@@ -1,6 +1,6 @@
 # TP Linux n°1
 
-***⚠️❗️ METTRE UNE PHOTO POUR FAIRE LA PAGE DE GARDE ❗️⚠️***
+🔵🔵***⚠️❗️ METTRE UNE PHOTO POUR FAIRE LA PAGE DE GARDE ❗️⚠️***
 
 ## Sommaire
 
@@ -47,7 +47,7 @@ Sur le réseau d'Ynov :
 
 ![sur le reseau d'Ynov](https://github.com/LBROCHARD/TP_Linux/blob/main/images/003%20connection%20echec.png) 
 
-  ***⚠️❗️ PARLER DU SSH ? ❗️⚠️***
+  🔵🔵***⚠️❗️ PARLER DU SSH ? ❗️⚠️***
 
 ## Installation de l'outil de gestion de ticket 🎫
 
@@ -101,7 +101,7 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
 ⚠️On utilise ```quit``` pour quitter MariaDB
 
 
- ***⚠️❗️ EST CE QU'IL FAUT UTILISER CA ? : ```apt-get install phpmyadmin``` ❗️⚠️***
+ 🔵🔵***⚠️❗️ EST CE QU'IL FAUT UTILISER CA ? : ```apt-get install phpmyadmin``` ❗️⚠️***
  
  ### Installation du GLPI :
  
@@ -161,7 +161,7 @@ Il est donc temps de configurer le GLPI, tout d'abord, entrez votre langue d'uti
  
  ***📸❗️ capture d'ecran glpi setup etape 1 config conexion  ❗️📸***
  
- Cette fenêtre nous demande maintennat d'associer la base de donnée que nous avions créé sur MariaDB, avec le GLPI, il faut donc renseigner "localhost", dans "serveur SQL(MariaDB ou MySQL), "glpiuser" dans "utilisateur SQL", et renseigner le mot de passe que vous avez choisis precedemment.
+ Cette fenêtre nous demande maintennat d'associer la base de donnée que nous avions créé sur MariaDB, avec le GLPI, il faut donc renseigner "localhost", dans *serveur SQL(MariaDB ou MySQL)*, "glpiuser" dans *utilisateur SQL*, et renseigner le mot de passe que vous avez choisis precedemment.
  
  ***📸❗️ capture d'ecran glpi setup etape 2 test co base donné  ❗️📸***
  
@@ -172,7 +172,7 @@ Il est donc temps de configurer le GLPI, tout d'abord, entrez votre langue d'uti
   Vous allez maintenant pourvoir initialiser la base de donnée en appuyant sur continuer.
  
  ⚠️ Attention ! laissez le temps à l'installation de ce faire une fois que vous appuyez sur continuer. Si vous le faites 2 fois, vous risquez de créer plusieurs bases de données, ce qui peut créer des soucis plus tard. 
-Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape de ![recommancer l'installation du glpi]()
+Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape de [recommancer l'installation du glpi]()
 
 On vas maintenant vous demandez si vous voulez ou non transmettre des donées à des fins d'amelioration du service, et si vous voulez faire un don à l'entreprise qui le développe, libre à vous de choisir ce que vous voulez faire.
 
@@ -186,18 +186,82 @@ L'installation est maintenant terminée, vous pouvez cliquez sur Utilisez GLPI e
 
 Durant le TP, nous avons corrompus la base de données, mais nous avons réussis à la supprimer proprement pour la réinstaller.
 
+🔵🔵***⚠️❗ FINIR çA ❗️⚠️***
+
 ### Accès au GLPI :
+
+***📸❗️ capture d'ecran de la connexion qu glpi ❗️📸***
+
+Vous pouvez maintenant vous connecter au glpi avec l'utilisateur par défaut,  
+utilisez glpi comme identifiant et comme mot de passe.
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
 
+Nous allons maintenant installer FusionInventory, un plugin du GLPI qui vas nous permettre de remonter les informations d'un ordinateur client vers notre serveur GLPI. 
 
+### Installations :
 
+Tout d'abord, il faut installer le FusionInventory, pour ce faire, on met à jour notre système avec `apt-get update && apt-get upgrade` 
 
+Et on télécharge le fusion inventory de la même manière que pour le GLPI :
 
+`cd /usr/src `
+`wget https://github.com/fusioninventory/fusioninventory-for-glpi/archive/glpi9.3+1.3.tar.gz `
+`tar -zxvf glpi9.3+1.3.tar.gz -C /var/www/html/glpi/plugins  `
 
+On lui attribue les droits :
 
+`chown -R www-data /var/www/html/glpi/plugins`
 
+Et on prépare la compatibilité du repertoire :
+
+`cd /var/www/html/glpi/plugins `
+`mv fusioninventory-for-glpi-glpi9.3-1.3/ fusioninventory/ ` 
+
+### Installation sur l'interface web :
+
+Pour finaliser l'installation sur l'interface web, connectez vous au GLPI avec l'utilisateur glpi, qui est le superutilisateur du GLPI.
+
+***📸❗️ capture d'ecran GLPI configuration plugin ❗️📸***
+
+Rendez vous ensuite dans *Configuration*, puis *Plugins*, ou vous devriez voir appraître le Fusion Inventory : 
+
+***📸❗️ capture d'ecran GLPI  fusion inventory dans plugins❗️📸***
+
+Si c'est le cas, appuyer sur *Installer*, et lorsque le plugin est installé, appuyez sur *Activer* pour l'activer.
+
+⚠️ Attention, cette étape d'installation peut prendre un moment, ne perdez pas patience, et faites attention à ne pas interrompre l'installation !
+
+### Configuration du FusionInventory :
+
+Allez maintenant dans *Administration*, puis *FusionInventory*
+
+***📸❗️ capture d'ecran GLPI menu de configuration❗️📸***
+
+Le plugin est maintenant fonctionnel, mais un message nous informe que le CRON du GLPI ne fonctionne pas, en effet, pour que le GLPI fonctionne tout seul, on a besoin d'automatiser son fonctionnement en configurant le CRON pour envoyer une requette toutes les minutes au serveur.
+
+Pour ce faire ouvrez le CRON :
+
+`crontab -u www-data -e`
+
+Selectionnez le choix 1, et ajouter la ligne suivante à la suite :
+
+`*/1 * * * * /usr/bin/php5 /var/www/html/glpi/front/cron.php &>/dev/null`
+
+Puis relancez le CRON :
+
+`/etc/init.d/cron restart`
+
+Rendez vous maintenant dans *Configuration*, puis *Actions Automatiques* et cherchez dans la liste le *TaskScheduler*
+
+***📸❗️ capture d'ecran TaskScheduler❗️📸***
+
+Cliquez dessus et et utilisez le bouton *Exécuter*
+
+***📸❗️ capture d'ecran action automatique❗️📸***
+
+Le message d'erreur devrait maintenant 
 
 
 
