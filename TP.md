@@ -7,7 +7,8 @@
 - ### [Introduction](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#introduction-1)
 - ### [Mise en place des machines virtuelles](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-des-machines-virtuelles-1)
 - ### [Configuration des services réseaux](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-des-services-r%C3%A9seaux-1)
-- ### [Configuration de l'outil de gestion de ticket](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-de-loutil-de-gestion-de-ticket-1)
+- ### [Installation de l'outil de gestion de ticket](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#configuration-de-loutil-de-gestion-de-ticket-1)
+- ### [Configuration de l'outil de gestion de ticket]()
 - ### [Ajout d'un plugin de remonté de poste client](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#ajout-dun-plugin-de-remont%C3%A9-de-poste-client-1)
 - ### [Mise en place d'une sauvegarde du GLPI](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#mise-en-place-dune-sauvegarde-du-glpi-1)
 
@@ -48,7 +49,7 @@ Sur le réseau d'Ynov :
 
   ***⚠️❗️ PARLER DU SSH ? ❗️⚠️***
 
-## Configuration de l'outil de gestion de ticket 🎫
+## Installation de l'outil de gestion de ticket 🎫
 
 
 Maintenant que les machines virtuels sonts configurées, il est temps d'installer l'outil de gestion de ticket.
@@ -120,7 +121,10 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
  
  ```chown -R www-data /var/www/html/glpi/```
  
- ***⚠️❗️ EST CE QU'ON FERAIT PAS UNE CATEGORIE POUR INSTALLATION GLPI ET UNE AUTRE POUR LA CONFIGURATION ? ❗️⚠️***
+ 
+## Configuration de l'outil de gestion de ticket 🔧
+
+
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
