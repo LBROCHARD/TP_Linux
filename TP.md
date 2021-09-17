@@ -261,7 +261,39 @@ Cliquez dessus et et utilisez le bouton *Exécuter*
 
 ***📸❗️ capture d'ecran action automatique❗️📸***
 
-Le message d'erreur devrait maintenant 
+Le message d'erreur devrait avoir disparus !
+
+
+### Installation de l'agent FusionInventory : 
+
+Il faut maintenant installer l'agent du FusionInventory sur le poste client, basculez donc sur votre VM Windows, et rendez vous sur ce site :     http://fusioninventory.org/documentation/agent/installation/
+
+Pour pouvoir télécharger l'agent dans sa version Windows.
+
+***📸❗️ capture d'ecran site de l'agent❗️📸***
+
+Une fois téléchargé, executez l'installeur en mode administrateur, et complétez l'installation, jusqu'à arriver aux choix des composants :
+
+***📸❗️ capture d'ecran fusion agent ❗️📸***
+
+Selectionnez *Complète* dans *Type d'installation* pour avoir tout les composants (comme ci-dessus).
+
+Selectionnez ensuite l'emplacment de l'installation et cliquez sur suivant.
+
+L'écran suivant est unécran nous permettant de choisir à quel serveur l'agente enverra les resultats obtenues sur le poste, il faut donc renseigner l'emplacement de son réseau comme ceci :
+
+***📸❗️ capture d'ecran fusion agent ❗️📸***
+
+Il suffit pour cela de copier la ligne suivante : `http://<serveur>/glpi/plugins/fusioninventory/` et de remplacer  <*serveur*> par l'adresse ip de votre machine serveur (Debian pour nous).
+
+⚠️ N'oubliez pas de cocher la case *Installation rapide (n’affiche pas les autres options Windows)*
+
+Appuyez sur *Installer* et une fois que c'est fait, appuyez sur *Suivant* pour finaliser l'installation.
+
+### Vérification de l'installation : 
+
+
+
 
 
 
