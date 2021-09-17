@@ -1,6 +1,7 @@
 # TP Linux n°1
 
 🔵🔵***⚠️❗️ METTRE UNE PHOTO POUR FAIRE LA PAGE DE GARDE ❗️⚠️***
+![]()
 
 ## Sommaire
 
@@ -133,38 +134,38 @@ Il faut simplement taper l'adresse ip de la machine contenant le serveur GLPI su
 
 ⚠️ Pour obtenir cette adresse, on peut utiliser la commande `ip a ` et aller chercher l'adresse sous <BRODCAST,MULTICAST,UP,LOWER_UP>, juste après le "inet", comme ci dessous :
 
- ***📸❗️ INSERER CAPTURE DECRAN DE IP A ❗️📸***
+ ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20ip%20a.png)
  
 Et le résultat suivant devrait s'afficher sur votre navigateur :
  
-***📸❗️ capture d'ecran glpi setup langue  ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20langue.png)
   
 Il est donc temps de configurer le GLPI, tout d'abord, entrez votre langue d'utilisation.
 
-***📸❗️ capture d'ecran glpi setup licence  ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20liscence%20.png)
  
  Puis acceptez les termes de la liscence.
  Et sur l'écran suivant :
  
- ***📸❗️ capture d'ecran glpi setup debut installation  ❗️📸***
+ ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20debut%20installation.png)
  
  Cliquez sur "installer".
  
- ***📸❗️ capture d'ecran glpi setup paquets  ❗️📸***
+ ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20packets.png)
  
  S'en suit alors une liste de paquets avec la vérification de leur installation (tout devrait être vert)
  
  ⚠️ L'erreur tout en bas est une alerte de sécurité, car pour l'instant, notre serveur comporte des failles de sécurité, que nous pouvons ignorer dans le cadre d'un TP.
- 
- ***📸❗️ capture d'ecran glpi setup etape 1 config conexion  ❗️📸***
+
+ ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20etape%201.png)
  
  Cette fenêtre nous demande maintennat d'associer la base de donnée que nous avions créé sur MariaDB, avec le GLPI, il faut donc renseigner "localhost", dans *serveur SQL(MariaDB ou MySQL)*, "glpiuser" dans *utilisateur SQL*, et renseigner le mot de passe que vous avez choisis precedemment.
  
- ***📸❗️ capture d'ecran glpi setup etape 2 test co base donné  ❗️📸***
+ ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20test%20co%20base%20de%20donn%C3%A9es.png)
  
  Si tout c'est passé correctement, vous devriez maintenant voir votre base de donnée dans les options de selection de la base de données (nous l'avons appelées glpidb), séléctionnez là, puis appuyez sur continuer.
  
-  ***📸❗️ capture d'ecran glpi setup etape 3 initialisation bdd  ❗️📸***
+  ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20initialisation%20bdd.png)
   
   Vous allez maintenant pourvoir initialiser la base de donnée en appuyant sur continuer.
  
@@ -173,7 +174,7 @@ Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape d
 
 On vas maintenant vous demandez si vous voulez ou non transmettre des donées à des fins d'amelioration du service, et si vous voulez faire un don à l'entreprise qui le développe, libre à vous de choisir ce que vous voulez faire.
 
-  ***📸❗️ capture d'ecran glpi setup etape 6 initialisation terminée  ❗️📸***
+  ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20initialisation%20termin%C3%A9.png)
 
 L'installation est maintenant terminée, vous pouvez cliquez sur Utilisez GLPI et passer à l'étape suivante.
 
@@ -186,24 +187,24 @@ Durant le TP, nous avons corrompus la base de données, mais nous avons réussis
 Pour supprimer la base de donnée, rendez vous sur le terminal de votre machine Linux, (en root) et entrez dans MariaDB grâce à la commande `mysql`, puis executez la commande suivante : `DROP DATABASE glpidb;`, ce qui vas supprimer la base de donnée.  ⚠️ ici glpidb est le nom de ma database, il ne s'agit pas forcément toujours de celui-ci.
 Si vous relancez votre page GLPI maintenant, vous allez avoir le message suivant :
 
-***📸❗️ capture d'ecran glpi erreur glpi❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20glpi%20erreur.png)
 
 Maintenant, la base de donée à été supprimé, mais si vous recréez votre base de donnée maintenant, cela ne vas pas vous permettre de la reconfigurer, à cause du fichier *config_db.php* qui retient la configuration. Pour reconfigurer votre DB il vous faut donc supprimer ce fichier, que l'on peut trouver en faisant `cd /var/www/html/glpi/config` vous pouvez maintenant supprimer le fichier problématique avec `rm config_db.php`, et si vous retournez sur votre page GLPI :
 
-***📸❗️ capture d'ecran glpi setup langue❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20setup%20langue.png)
 
 Boom ! Tout beau tout propre. Vous pouvez désormais recréer votre base de donné en faisant `mysql` pour entreer dans MariaDB puis refaites un base de donnée comme à [cette étape]() et reprendre à partir d'[ici]().
 
 ### Création utilisateur :
 
-***📸❗️ capture d'ecran de la connexion qu glpi ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/008%20connexion%20au%20glpi.png)
 
 Vous pouvez maintenant vous connecter au glpi avec l'utilisateur par défaut,  
 utilisez glpi comme identifiant et comme mot de passe.
 
 ⚠️Mais comme vous pouvez vous en douter, cet utilisateur n'est pas du tout sécurisé, il est donc important de se rendre dans *Administration*, puis *Utilisateurs*.
 
-***📸❗️ capture d'ecran utilisateurs ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/007%20utilisateurs%20.png)
 
 Et il faut maintenant remplacer l'utilisateur *glpi* par un utilisateur avec un mot de passe sécurisé.
 
@@ -242,10 +243,11 @@ Et on prépare la compatibilité du repertoire :
 Pour finaliser l'installation sur l'interface web, connectez vous au GLPI avec l'utilisateur glpi, qui est le superutilisateur du GLPI.
 
 ***📸❗️ capture d'ecran GLPI configuration plugin ❗️📸***
+![]()
 
 Rendez vous ensuite dans *Configuration*, puis *Plugins*, ou vous devriez voir appraître le Fusion Inventory : 
 
-***📸❗️ capture d'ecran GLPI  fusion inventory dans plugins❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/009%20plugins%20fi.png)
 
 Si c'est le cas, appuyer sur *Installer*, et lorsque le plugin est installé, appuyez sur *Activer* pour l'activer.
 
@@ -255,7 +257,7 @@ Si c'est le cas, appuyer sur *Installer*, et lorsque le plugin est installé, ap
 
 Allez maintenant dans *Administration*, puis *FusionInventory*
 
-***📸❗️ capture d'ecran GLPI menu de configuration❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/009%20ecran%20glpi%20menu%20configuration.png)
 
 Le plugin est maintenant fonctionnel, mais un message nous informe que le CRON du GLPI ne fonctionne pas, en effet, pour que le GLPI fonctionne tout seul, on a besoin d'automatiser son fonctionnement en configurant le CRON pour envoyer une requette toutes les minutes au serveur.
 
@@ -273,11 +275,11 @@ Puis relancez le CRON :
 
 Rendez vous maintenant dans *Configuration*, puis *Actions Automatiques* et cherchez dans la liste le *TaskScheduler*
 
-***📸❗️ capture d'ecran TaskScheduler❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/009%20task%20scheluder.png)
 
 Cliquez dessus et et utilisez le bouton *Exécuter*
 
-***📸❗️ capture d'ecran action automatique❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/009%20executer%20action%20automatique.png)
 
 Le message d'erreur devrait avoir disparus !
 
@@ -288,11 +290,11 @@ Il faut maintenant installer l'agent du FusionInventory sur le poste client, bas
 
 Pour pouvoir télécharger l'agent dans sa version Windows.
 
-***📸❗️ capture d'ecran site de l'agent❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/010%20ecran%20site%20agent.png)
 
 Une fois téléchargé, executez l'installeur en mode administrateur, et complétez l'installation, jusqu'à arriver aux choix des composants :
 
-***📸❗️ capture d'ecran fusion agent ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/010%20fusion%20agent%20.png)
 
 Selectionnez *Complète* dans *Type d'installation* pour avoir tout les composants (comme ci-dessus).
 
@@ -300,7 +302,7 @@ Selectionnez ensuite l'emplacment de l'installation et cliquez sur suivant.
 
 L'écran suivant est unécran nous permettant de choisir à quel serveur l'agente enverra les resultats obtenues sur le poste, il faut donc renseigner l'emplacement de son réseau comme ceci :
 
-***📸❗️ capture d'ecran fusion agent ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/010%20fusion%20agent%202.png)
 
 Il suffit pour cela de copier la ligne suivante : `http://<serveur>/glpi/plugins/fusioninventory/` et de remplacer  <*serveur*> par l'adresse ip de votre machine serveur (Debian pour nous).
 
@@ -312,7 +314,7 @@ Appuyez sur *Installer* et une fois que c'est fait, appuyez sur *Suivant* pour f
 
 Nous allons maintenant vérifier qu'un lien c'est bien créé entre l'agent et le GLPI. Sur votre machine client, ouvrez un navigateur internet et rentrez l'adresse : **http://localhost:62354**, cela vas vous ouvrir une page qui doit ressembler à cela : 
 
-***📸❗️ capture d'ecran agent page web ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/010%20agent%20page%20web.png)
 
 Verifiez que tout est correct et cliquez sur *Force an Inventory*.
 
@@ -320,7 +322,7 @@ Retournez maintenant sur votre interface GLPI, et rendez vous dans *Administrati
 
 Vous devriez alors voir appraitre votre machine cliente dans la liste :
 
-***📸❗️ capture d'ecran machine cliente dans la liste ❗️📸***
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/010%20machine%20cliente%20dans%20la%20liste.png)
 
 
 
