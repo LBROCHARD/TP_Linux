@@ -124,7 +124,69 @@ On entre d'abord la commande ```mysql -u root -p ``` qui nous permet de controll
  
 ## Configuration de l'outil de gestion de ticket 🔧
 
+Maintenant que le GLPI est installé, nous allons pouvoir le configurer grâce à son interface web. L'un des grands avantages du GLPI est l'interface visuelle qui nous permet de le configurer à partir d'un simple navigateur internet !
 
+### Setup du GLPI :
+
+Pour ce faire il suffit d'ouvrir un navigateur sur un ordinateur present sur le reseau, et de taper l'adresse suivante : 
+
+`http://.../glpi `
+
+Il faut simplement taper l'adresse ip de la machine contenant le serveur GLPI suivit du `/glpi`.
+
+⚠️ Pour obtenir cette adresse, on peut utiliser la commande `ip a ` et aller chercher l'adresse sous <BRODCAST,MULTICAST,UP,LOWER_UP>, juste après le "inet", comme ci dessous :
+
+ ***📸❗️ INSERER CAPTURE DECRAN DE IP A ❗️📸***
+ 
+Et le résultat suivant devrait s'afficher sur votre navigateur :
+ 
+***📸❗️ capture d'ecran glpi setup langue  ❗️📸***
+  
+Il est donc temps de configurer le GLPI, tout d'abord, entrez votre langue d'utilisation.
+
+***📸❗️ capture d'ecran glpi setup licence  ❗️📸***
+ 
+ Puis acceptez les termes de la liscence.
+ Et sur l'écran suivant :
+ 
+ ***📸❗️ capture d'ecran glpi setup debut installation  ❗️📸***
+ 
+ Cliquez sur "installer".
+ 
+ ***📸❗️ capture d'ecran glpi setup paquets  ❗️📸***
+ 
+ S'en suit alors une liste de paquets avec la vérification de leur installation (tout devrait être vert)
+ 
+ ⚠️ L'erreur tout en bas est une alerte de sécurité, car pour l'instant, notre serveur comporte des failles de sécurité, que nous pouvons ignorer dans le cadre d'un TP.
+ 
+ ***📸❗️ capture d'ecran glpi setup etape 1 config conexion  ❗️📸***
+ 
+ Cette fenêtre nous demande maintennat d'associer la base de donnée que nous avions créé sur MariaDB, avec le GLPI, il faut donc renseigner "localhost", dans "serveur SQL(MariaDB ou MySQL), "glpiuser" dans "utilisateur SQL", et renseigner le mot de passe que vous avez choisis precedemment.
+ 
+ ***📸❗️ capture d'ecran glpi setup etape 2 test co base donné  ❗️📸***
+ 
+ Si tout c'est passé correctement, vous devriez maintenant voir votre base de donnée dans les options de selection de la base de données (nous l'avons appelées glpidb), séléctionnez là, puis appuyez sur continuer.
+ 
+  ***📸❗️ capture d'ecran glpi setup etape 3 initialisation bdd  ❗️📸***
+  
+  Vous allez maintenant pourvoir initialiser la base de donnée en appuyant sur continuer.
+ 
+ ⚠️ Attention ! laissez le temps à l'installation de ce faire une fois que vous appuyez sur continuer. Si vous le faites 2 fois, vous risquez de créer plusieurs bases de données, ce qui peut créer des soucis plus tard. 
+Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape de ![recommancer l'installation du glpi]()
+
+On vas maintenant vous demandez si vous voulez ou non transmettre des donées à des fins d'amelioration du service, et si vous voulez faire un don à l'entreprise qui le développe, libre à vous de choisir ce que vous voulez faire.
+
+  ***📸❗️ capture d'ecran glpi setup etape 6 initialisation terminée  ❗️📸***
+
+L'installation est maintenant terminée, vous pouvez cliquez sur Utilisez GLPI et passer à l'étape suivante.
+
+### ⚠️ Recomencer l'instalation de la base de donnée :
+
+⚠️ Si vous avez rencontré un problème durant l'étape d'installation et de configuration de la base de données, il est possible de de la réinstaller, sinon, sautez cette étape.
+
+Durant le TP, nous avons corrompus la base de données, mais nous avons réussis à la supprimer proprement pour la réinstaller.
+
+### Accès au GLPI :
 
 
 ## Ajout d'un plugin de remonté de poste client 👨🏿‍💻
