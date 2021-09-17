@@ -170,7 +170,7 @@ Il est donc temps de configurer le GLPI, tout d'abord, entrez votre langue d'uti
   Vous allez maintenant pourvoir initialiser la base de donnée en appuyant sur continuer.
  
  ⚠️ Attention ! laissez le temps à l'installation de ce faire une fois que vous appuyez sur continuer. Si vous le faites 2 fois, vous risquez de créer plusieurs bases de données, ce qui peut créer des soucis plus tard. 
-Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape de [recommancer l'installation du glpi]()
+Si vous avez malencontreusement cliquez plusieurs fois, allez voir à l'étape de [recommancer l'installation du glpi](https://github.com/LBROCHARD/TP_Linux/blob/main/TP.md#%EF%B8%8F-recomencer-linstalation-de-la-base-de-donn%C3%A9e-)
 
 On vas maintenant vous demandez si vous voulez ou non transmettre des donées à des fins d'amelioration du service, et si vous voulez faire un don à l'entreprise qui le développe, libre à vous de choisir ce que vous voulez faire.
 
