@@ -10,8 +10,8 @@
 
 ### Installation des Machines Virtuels
 
-### Configuration du reseau
+### Configuration d'un site web avec apache
 
-### Configurer le service Web
+### 
 
 ### Mise en place d’une solution de haute-disponibilité
