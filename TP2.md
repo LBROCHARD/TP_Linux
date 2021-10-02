@@ -40,8 +40,13 @@ pourquoi on a en besoin
 
 faire le site web
 
+parler de ce qu'est un nom de domaine (DNS et tt ça)
+
 comment on aurait put le sécuriser 
 
 
 ## Installation de PHP sur le serveur appache
+
+les deux manière de faire 
+la bonne manière de faire 
 
