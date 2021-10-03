@@ -37,7 +37,7 @@ L'installation d'une machine virtuelle consiste simpement à télécharger et in
 
 La Machine virtuelle Debian 11 :
 
-<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png" alt="drawing" width="500"/>
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png" width="500"/>
 
 ## Configuration d'un site web avec apache
 
@@ -51,6 +51,10 @@ La première étape est donc d'installer Apache sur notre Debian avec la command
 
 Apache est capable de gérer plusieurs sites web en même temps, on les appelles Virtuels Hosts. C'est la requette HTTP qui renseignera le site à consulter.
 Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` dans le repertoire `/etc/apache2/sites-available/` avec la commande `cd /etc/apache2/sites-available/`.
+
+📷❗️❗️  image du repertoir  ❗️❗️📷
+
+On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande 
 
 parler de ce qu'est un nom de domaine (DNS et tt ça)
 
