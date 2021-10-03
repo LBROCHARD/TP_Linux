@@ -57,30 +57,23 @@ Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` 
 On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande `touch`.
 Nous allons appeler notre fichier `ww.test.com.conf` :
 
-⚠️ Attention, pour ajouter un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
+⚠️ Attention, pour ajouter ou modifier un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
 
 📷❗️❗️  image du sudo touch  ❗️❗️📷
 
-On vas maintenant ouvrir ce fichier avec la commande `nano www.test.com.conf` et y entrer le code suivant :
+On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.conf` et y entrer le code suivant :
 
 <pre>
 <code>
   &lt;VirtualHost *:80&gt;
-    ServerName www.example.com
-    ServerAlias example.com
-    ServerAdmin webmaster@example.com
-    DocumentRoot /var/www/html/www.example.com
-
-    CustomLog ${APACHE_LOG_DIR}/www.example.com-access.log combined
-    ErrorLog ${APACHE_LOG_DIR}/www.example.com-error.log
-
-    &lt;Directory /var/www/html/www.example.com&gt;
-        Options All
-        AllowOverride None
-    &lt;/Directory&gt;
-  &lt;/VirtualHost&gt;
+    ServerName www.test.com
+    ServerAlias test.com
+    ServerAdmin webmaster@test.com
+    DocumentRoot /var/www/html/www.test.com
 </code>
 </pre>
+
+Le \*80 correspond ici au port sur lequel le serveur vas écouter 
 
 parler de ce qu'est un nom de domaine (DNS et tt ça)
 
