@@ -36,8 +36,8 @@ Nous allons utiliser une Debian 11 car il s'agit de la dernière version d'un li
 L'installation d'une machine virtuelle consiste simpement à télécharger et installer un ISO du système souhaité sur VMWare. Cette étape n'étant pas l'interet de TP elle ne sera pas développée.
 
 La Machine virtuelle Debian 11 :
-<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png" alt="drawing" width="200"/>
-![Machine Debian](https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png)
+
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png" alt="drawing" width="500"/>
 
 ## Configuration d'un site web avec apache
 
