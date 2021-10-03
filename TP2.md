@@ -50,7 +50,7 @@ La première étape est donc d'installer Apache sur notre Debian avec la command
 ```sudo apt-get install apache2```
 
 Apache est capable de gérer plusieurs sites web en même temps, on les appelles Virtuels Hosts. C'est la requette HTTP qui renseignera le site à consulter.
-Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` dans le repertoire `/etc/apache2/sites-available/`
+Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` dans le repertoire `/etc/apache2/sites-available/` avec la commande `cd /etc/apache2/sites-available/`.
 
 parler de ce qu'est un nom de domaine (DNS et tt ça)
 
