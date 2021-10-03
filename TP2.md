@@ -31,11 +31,13 @@ Pour ce faire, nous allons mettre en place un hébergement de serveur web avec A
 
 ## Installation des Machines Virtuels
 
-📷❗️❗️  screen de la vm   ❗️❗️📷
-
 Dans le cadre du TP, nous allons utiliser une machie virtuelle sur VMWare. 
 Nous allons utiliser une Debian 11 car il s'agit de la dernière version d'un linux très stable, et parce que nous avons besoin d'un linux pour installer le serveur Apache.
 L'installation d'une machine virtuelle consiste simpement à télécharger et installer un ISO du système souhaité sur VMWare. Cette étape n'étant pas l'interet de TP elle ne sera pas développée.
+
+La Machine virtuelle Debian 11 :
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png" alt="drawing" width="200"/>
+![Machine Debian](https://github.com/LBROCHARD/TP_Linux/blob/main/images/004%20vm%20debian.png)
 
 ## Configuration d'un site web avec apache
 
