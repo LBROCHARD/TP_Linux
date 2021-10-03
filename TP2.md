@@ -78,7 +78,7 @@ On vas maintenant ouvrir ce fichier avec la commande `nano www.test.com.conf` et
         AllowOverride None
     </Directory>
   </VirtualHost>
-<code>
+</code>
 
 parler de ce qu'est un nom de domaine (DNS et tt ça)
 
