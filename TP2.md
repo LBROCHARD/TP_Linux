@@ -59,6 +59,8 @@ Nous allons appeler notre fichier `ww.test.com.conf` :
 
 ⚠️ Attention, pour ajouter ou modifier un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
 
+⚠️ Si vous ne voulez pas vous embeter à utiliser sudo devant chaque commande, vous pouvez passer en mode root avec la commande `su -`. Cette commande vous demandera votre mot de passe, puis vous entrerez en mode root. Si vous êtes en mode root, vous pouvez ignorer tout les sudo avant les commandes.
+
 📷❗️❗️  image du sudo touch  ❗️❗️📷
 
 On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.conf` et y entrer le code suivant :
@@ -70,14 +72,28 @@ On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.con
     ServerAlias test.com
     ServerAdmin webmaster@test.com
     DocumentRoot /var/www/html/www.test.com
+  &lt;/VirtualHost *:80&gt;
 </code>
 </pre>
 
-Le \*80 correspond ici au port sur lequel le serveur vas écouter 
+Le \*:80 correspond ici au port sur lequel le serveur va écouter. 
+Le *ServerName* correspond au nom utilisé par le Virtuel Host sur notre server, il ne peut y avoir qu'un seul *ServerName* mais il peut y a voir plusieurs *ServerAlias* (qui correspondent a des noms alternatifs au cas ou le *ServerName* ne fonctionne pas).
+Le *ServerAdmin* correspond à l'adresse mail qui sera utilisé sur certaines erreurs pour entreer en contact avec le moderateur.
+Et enfin le *DocumentRoot* est l'emplacement des fichiers de votre site web.
 
-parler de ce qu'est un nom de domaine (DNS et tt ça)
+⚠️ Il existes encore de nombreux paramètres que nous aurions pu régler, mais dans le cadre d'un TP, cette configuration suffira.
 
-comment on aurait put le sécuriser plus
+Maintenant que notre VirtualHost a été créé, il nous reste donc a implémenter notre site web.
+Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site avec la commande `cd /var/www/html/`
+et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
+
+📷❗️❗️  index.html bonsoir ❗️❗️📷
+
+Puis pour lier 
+
+❗️❗️parler de ce qu'est un nom de domaine (DNS et tt ça)
+
+❗️❗️comment on aurait put le sécuriser plus
 
 
 ## Installation de PHP sur le serveur appache
