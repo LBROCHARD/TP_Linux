@@ -6,15 +6,15 @@
 
 
 
-### Introduction
+### [Introduction]()
 
-### Installation des Machines Virtuels
+### [Installation des Machines Virtuels]()
 
-### Configuration d'un site web avec apache
+### [Configuration d'un site web avec apache]()
 
-### Installation de PHP sur le serveur appache
+### [Installation de PHP sur le serveur appache]()
 
-### 
+### [.]()
 
 
 
@@ -23,7 +23,7 @@
 ## Introduction
 
 📷❗️❗️  image de inforM   ❗️❗️📷
-!(image de inforM)[]
+![image de inforM]()
 
 Suite à un incendie dans la société qui hébergait le site web de la société inforM, cette dernière à décidée d'héberger elle même son site web.
 Pour ce faire, nous allons mettre en place un hébergement de serveur web avec Apache.
