@@ -63,9 +63,10 @@ Nous allons appeler notre fichier `ww.test.com.conf` :
 
 On vas maintenant ouvrir ce fichier avec la commande `nano www.test.com.conf` et y entrer le code suivant :
 
+<blockquote>
 <pre>
 <code>
-  <VirtualHost *:80>
+  "<VirtualHost *:80>
     ServerName www.example.com
     ServerAlias example.com
     ServerAdmin webmaster@example.com
@@ -78,9 +79,10 @@ On vas maintenant ouvrir ce fichier avec la commande `nano www.test.com.conf` et
         Options All
         AllowOverride None
     </Directory>
-  </VirtualHost>
+  </VirtualHost>"
 </code>
 </pre>
+</blockquote>
 
 parler de ce qu'est un nom de domaine (DNS et tt ça)
 
