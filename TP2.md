@@ -23,8 +23,7 @@
 
 ## Introduction
 
-📷❗️❗️  image de inforM   ❗️❗️📷
-![image de inforM]()
+![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/002%20infoM.png)
 
 Suite à un incendie dans la société qui hébergait le site web de la société inforM, cette dernière à décidée d'héberger elle même son site web.
 Pour ce faire, nous allons mettre en place un hébergement de serveur web avec Apache.
