@@ -53,6 +53,7 @@ Apache est capable de gérer plusieurs sites web en même temps, on les appelles
 Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` dans le repertoire `/etc/apache2/sites-available/` avec la commande `cd /etc/apache2/sites-available/`.
 
 📷❗️❗️  image du repertoir  ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/2%20contenue%20cd%20etc-apache-sites%20available%20.png" width="500"/>
 
 On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande `touch`.
 Nous allons appeler notre fichier `ww.test.com.conf` :
@@ -62,6 +63,7 @@ Nous allons appeler notre fichier `ww.test.com.conf` :
 ⚠️ Si vous ne voulez pas vous embeter à utiliser sudo devant chaque commande, vous pouvez passer en mode root avec la commande `su -`. Cette commande vous demandera votre mot de passe, puis vous entrerez en mode root. Si vous êtes en mode root, vous pouvez ignorer tout les sudo avant les commandes.
 
 📷❗️❗️  image du sudo touch  ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/3%20sudo%20touch.png" width="500"/>
 
 On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.conf` et y entrer le code suivant :
 
@@ -88,6 +90,7 @@ Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site ave
 et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
 
 📷❗️❗️  index.html bonsoir ❗️❗️📷
+
 
 Puis pour lier 
 
