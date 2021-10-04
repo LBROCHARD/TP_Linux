@@ -110,7 +110,7 @@ Un DNS (pour Domaine Name Système) est un outil qui permet de relier un nom de 
 
 Pour Configurer un DNS, les étapes sont assez simples. Rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le fichier hosts avec `nano hosts`.
 
-📷❗️❗️  image de nano hosts  ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/10%20nano%20hosts.png" width="500"/>
 
 
 
