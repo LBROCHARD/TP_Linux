@@ -13,11 +13,11 @@
 
 ### [Configuration d'un site web avec apache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dun-site-web-avec-apache-1)
 
-### [Installation de PHP sur le serveur appache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#installation-de-php-sur-le-serveur-appache-1)
+### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
 ### [.]()
 
-
+### [Conclusion]()
 
 
 
@@ -55,7 +55,9 @@ Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/2%20contenue%20cd%20etc-apache-sites%20available%20.png"/>
 
 On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande `touch`.
-Nous allons appeler notre fichier `ww.test.com.conf` :
+Nous allons appeler notre fichier `01-www.test.com.conf` :
+
+⚠️ Dans le cadre d'un simple TP, je vais utiliser le nom test.com pour le site web, hors d'un TP, il faudrait remplacer cela par le nom du site, comme par exemple inforM.com
 
 ⚠️ Attention, pour ajouter ou modifier un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
 
@@ -63,7 +65,7 @@ Nous allons appeler notre fichier `ww.test.com.conf` :
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/3%20sudo%20touch.png"/>
 
-On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.conf` et y entrer le code suivant :
+On vas maintenant ouvrir ce fichier avec la commande `sudo nano 01-www.test.com.conf` et y entrer le code suivant :
 
 <pre>
 <code>
@@ -84,22 +86,47 @@ Et enfin le *DocumentRoot* est l'emplacement des fichiers de votre site web.
 ⚠️ Il existes encore de nombreux paramètres que nous aurions pu régler, mais dans le cadre d'un TP, cette configuration suffira.
 
 Maintenant que notre VirtualHost a été créé, il nous reste donc a implémenter notre site web.
-Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site avec la commande `cd /var/www/html/`
-et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
+Pour ce faire, il faut passer en mode root, si vous ne l'aviez pas fait auparavant, il est temps d'utiliser la commande `su -` (qui vas vous demander votre mot de passe)
+puis on vas éxecuter les commandes suivantes : `sudo mkdir /var/www/html/www.test.com/` et `sudo cp /var/www/html/index.html /var/www/html/www.test.com` .
+Ainsi, l'environement sdu site sera préparé. *index.html* corespond à l'enroit où l'on vas pouvoir mettre notre site web, comme li site web de InforM. Dans le cadre du TP, on vas se contenter d'y écrire un simple "Bonsoir".
 
-📷❗️❗️  index.html bonsoir ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/4%20html%20bonsoir.png" width="500"/>
 
+Il faut maintenant activer notre VirtualHost (donc le fichier .conf) avec la commande suivante `sudo a2ensite 01-www.test.com`.
+Puis pour mettre à jour les modification, on relance Apache : `sudo systemctl reload apache2`. 
 
-Puis pour lier 
+Dorénavant, si l'on ouvre un navigateur internet dans lequel on renseigne `localhost`, on tombe sur notre site :
 
-❗️❗️parler de ce qu'est un nom de domaine (DNS et tt ça)
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/5localhost.png" width="500"/>
+
 
 ❗️❗️comment on aurait put le sécuriser plus
 
 
-## Installation de PHP sur le serveur appache
+## Mise en place d'un DNS
+
+On peut acceder à notre site, c'est bien, mais maintenant, si on veut pouvoir y acceder depuis internet, et pas juste en local, il faut configurer un DNS.
+Un DNS (pour Domaine Name Système) est un outil qui permet de relier un nom de domaine à une adress IP. En claire, un DNS permet de rediriger vers l'adress IP de votre server quand quelqu'un entre le nom de votre domaine sur son navigateur. Par exemple, pour rejoindre le site de google, on se contente de tapre google.com, le DNS lui, fait correspondre ce nom de dommaine à une adress IP où se trouve le site web de google.
+
+Pour Configurer un DNS, les étapes sont assez simples. Rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le fichier hosts avec `nano hosts`.
+
+📷❗️❗️  image de nano hosts  ❗️❗️📷
+
+
+
+dns :
+192.168.121.195 test
 
 les deux manière de faire 
 la bonne manière de faire 
 
 
+
+
+
+## Conclusion
+
+En conclusion.
+
+
+Voilà...
