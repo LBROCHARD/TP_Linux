@@ -57,6 +57,8 @@ Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` 
 On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande `touch`.
 Nous allons appeler notre fichier `01-www.test.com.conf` :
 
+⚠️ Dans le cadre d'un simple TP, je vais utiliser le nom test.com pour le site web, hors d'un TP, il faudrait remplacer cela par le nom du site, comme par exemple inforM.com
+
 ⚠️ Attention, pour ajouter ou modifier un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
 
 ⚠️ Si vous ne voulez pas vous embeter à utiliser sudo devant chaque commande, vous pouvez passer en mode root avec la commande `su -`. Cette commande vous demandera votre mot de passe, puis vous entrerez en mode root. Si vous êtes en mode root, vous pouvez ignorer tout les sudo avant les commandes.
@@ -84,16 +86,23 @@ Et enfin le *DocumentRoot* est l'emplacement des fichiers de votre site web.
 ⚠️ Il existes encore de nombreux paramètres que nous aurions pu régler, mais dans le cadre d'un TP, cette configuration suffira.
 
 Maintenant que notre VirtualHost a été créé, il nous reste donc a implémenter notre site web.
-Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site avec la commande `cd /var/www/html/`
-et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
-
+Pour ce faire, il faut passer en mode root, si vous ne l'aviez pas fait auparavant, il est temps d'utiliser la commande `su -` (qui vas vous demander votre mot de passe)
+puis on vas éxecuter les commandes suivantes : `sudo mkdir /var/www/html/www.test.com/` et `sudo cp /var/www/html/index.html /var/www/html/www.test.com` .
+Ainsi, l'environement sdu site sera préparé. *index.html* corespond à l'enroit où l'on vas pouvoir mettre notre site web, comme li site web de InforM. Dans le cadre du TP, on vas se contenter d'y écrire un simple "Bonsoir".
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/4%20html%20bonsoir.png" width="500"/>
 
+Il faut maintenant activer notre VirtualHost (donc le fichier .conf) avec la commande suivante `sudo a2ensite 01-www.test.com`.
+Puis pour mettre à jour les modification, on relance Apache : `sudo systemctl reload apache2`. 
 
-Puis pour lier 
+
+
+
+
 
 ❗️❗️parler de ce qu'est un nom de domaine (DNS et tt ça)
+dns :
+192.168.121.195 test
 
 ❗️❗️comment on aurait put le sécuriser plus
 
