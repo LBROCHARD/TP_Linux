@@ -87,8 +87,8 @@ Maintenant que notre VirtualHost a été créé, il nous reste donc a implément
 Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site avec la commande `cd /var/www/html/`
 et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
 
-📷❗️❗️  index.html bonsoir ❗️❗️📷
-<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/4%20html%20bonsoir.png"/>
+
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/4%20html%20bonsoir.png" width="500"/>
 
 
 Puis pour lier 
