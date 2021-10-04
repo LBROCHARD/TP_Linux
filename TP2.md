@@ -108,17 +108,21 @@ Dorénavant, si l'on ouvre un navigateur internet dans lequel on renseigne `loca
 On peut acceder à notre site, c'est bien, mais maintenant, si on veut pouvoir y acceder depuis internet, et pas juste en local, il faut configurer un DNS.
 Un DNS (pour Domaine Name Système) est un outil qui permet de relier un nom de domaine à une adress IP. En claire, un DNS permet de rediriger vers l'adress IP de votre server quand quelqu'un entre le nom de votre domaine sur son navigateur. Par exemple, pour rejoindre le site de google, on se contente de tapre google.com, le DNS lui, fait correspondre ce nom de dommaine à une adress IP où se trouve le site web de google.
 
-Pour Configurer un DNS, les étapes sont assez simples. Rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le fichier hosts avec `nano hosts`.
+Pour Configurer un DNS, les étapes sont assez simples. D'abord, il vous faut obtenir votre adresse IP grâce à la commande `ip a` :
+
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/10%20nano%20hosts.png" />
+
+Puis rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le fichier hosts avec `nano hosts`.
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/10%20nano%20hosts.png" width="500"/>
 
+Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de voter domaine comme ci-dessous :
+
+<img src="" width="500"/>
 
 
 dns :
 192.168.121.195 test
-
-les deux manière de faire 
-la bonne manière de faire 
 
 
 
