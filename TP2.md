@@ -13,7 +13,7 @@
 
 ### [Configuration d'un site web avec apache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dun-site-web-avec-apache-1)
 
-### [Installation de PHP sur le serveur appache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#installation-de-php-sur-le-serveur-appache-1)
+### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
 ### [.]()
 
@@ -109,7 +109,7 @@ dns :
 ❗️❗️comment on aurait put le sécuriser plus
 
 
-## Installation de PHP sur le serveur appache
+## Mise en place d'un DNS
 
 les deux manière de faire 
 la bonne manière de faire 
