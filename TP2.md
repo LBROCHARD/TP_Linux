@@ -55,7 +55,7 @@ Pour Ajouter un nouveau Virtual Host, il faut créer un nouveau fichier `.conf` 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/2%20contenue%20cd%20etc-apache-sites%20available%20.png"/>
 
 On peut y voir les fichiers par default. Nous allons donc ajouter un nouveau Virtuel Host dans ce repertoir grâce à la commande `touch`.
-Nous allons appeler notre fichier `ww.test.com.conf` :
+Nous allons appeler notre fichier `01-www.test.com.conf` :
 
 ⚠️ Attention, pour ajouter ou modifier un fichier dans ce repertoir il nous faut les autorisation Admin, donc on rajoute un `sudo`devant la commande.
 
@@ -63,7 +63,7 @@ Nous allons appeler notre fichier `ww.test.com.conf` :
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/3%20sudo%20touch.png"/>
 
-On vas maintenant ouvrir ce fichier avec la commande `sudo nano www.test.com.conf` et y entrer le code suivant :
+On vas maintenant ouvrir ce fichier avec la commande `sudo nano 01-www.test.com.conf` et y entrer le code suivant :
 
 <pre>
 <code>
@@ -88,6 +88,7 @@ Pour ce faire, il faut se rendre à l'emplacement des fichiers de notre site ave
 et y créer un fichier `index.html` avec la commande `sudo touch index.html` vous pouvez à present y déposer votre site (pour le tp, nous nous contenterons d'un simple bonsoir).
 
 📷❗️❗️  index.html bonsoir ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/4%20html%20bonsoir.png"/>
 
 
 Puis pour lier 
