@@ -95,7 +95,9 @@ Ainsi, l'environement sdu site sera préparé. *index.html* corespond à l'enroi
 Il faut maintenant activer notre VirtualHost (donc le fichier .conf) avec la commande suivante `sudo a2ensite 01-www.test.com`.
 Puis pour mettre à jour les modification, on relance Apache : `sudo systemctl reload apache2`. 
 
+Dorénavant, si l'on ouvre un navigateur internet dans lequel on renseigne `localhost`, on tombe sur notre site :
 
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/5localhost.png" width="700"/>
 
 
 
