@@ -97,7 +97,7 @@ Puis pour mettre à jour les modification, on relance Apache : `sudo systemctl r
 
 Dorénavant, si l'on ouvre un navigateur internet dans lequel on renseigne `localhost`, on tombe sur notre site :
 
-<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/5localhost.png" width="700"/>
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/5localhost.png" width="500"/>
 
 
 
