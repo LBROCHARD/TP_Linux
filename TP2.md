@@ -120,10 +120,7 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/11%20hosts%20new%20hosts.png" width="500"/>
 
-
-dns :
-192.168.121.195 test
-
+❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
 
 
 
