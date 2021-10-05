@@ -110,7 +110,7 @@ Un DNS (pour Domaine Name Système) est un outil qui permet de relier un nom de 
 
 Pour Configurer un DNS, les étapes sont assez simples. D'abord, il vous faut obtenir votre adresse IP grâce à la commande `ip a` :
 
-<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/10%20nano%20hosts.png" />
+<img src="" />
 
 Puis rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le fichier hosts avec `nano hosts`.
 
@@ -118,7 +118,7 @@ Puis rendez vous dans le fichier *etc* avec la commande `cd /etc/` et ouvresz le
 
 Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de voter domaine comme ci-dessous :
 
-<img src="" width="500"/>
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/11%20hosts%20new%20hosts.png" width="500"/>
 
 
 dns :
