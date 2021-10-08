@@ -17,6 +17,8 @@
 
 ### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
+### [Mise en place d'un formulaire SSL]()
+
 ### [.]()
 
 ### [Conclusion]()
@@ -123,6 +125,9 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/11%20hosts%20new%20hosts.png" width="500"/>
 
 ❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
+
+
+## Mise en place d'un formulaire SSL
 
 
 
