@@ -17,7 +17,7 @@
 
 ### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
-### [Mise en place d'un formulaire SSL]()
+### [Mise en place d'un certificat SSL]()
 
 ### [.]()
 
@@ -127,7 +127,22 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 ❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
 
 
-## Mise en place d'un formulaire SSL
+## Mise en place d'un certificat SSL
+
+Notre site est donc mis en place, accéssible en local par son nom de domaine, mais il persite encore une erreur : il est en http. 
+
+📷❗️❗️  image de http  ❗️❗️📷
+<img src="" />
+
+Ce qui veut dire que l'internet portocol n'est pas sécurisé.
+Pour résoudre ce problème, on peut mettre en place un certificat SSL auto-signé.
+Un certificat SSL, déjà, est un fichier qui lie une clé de cryptage à un serveur dans le but de chiffrer, et donc protéger les données qui passent entre le serveur et le client.
+Le certificat SSL utilise la Cryptographie Asymétrique, c'est à dire un cryptographie qui se base sur une clé privée et une clé publique comme sur le schéma si dessous :
+
+📷❗️❗️  image de cryptage asymétrique 1 ❗️❗️📷
+<img src="" />
+
+Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée. En claire, elle crypte les données 
 
 
 
