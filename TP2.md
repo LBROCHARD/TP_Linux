@@ -17,6 +17,8 @@
 
 ### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
+### [Mise en place d'un certificat SSL]()
+
 ### [.]()
 
 ### [Conclusion]()
@@ -123,6 +125,34 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/11%20hosts%20new%20hosts.png" width="500"/>
 
 ❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
+
+
+## Mise en place d'un certificat SSL
+
+Notre site est donc mis en place, accéssible en local par son nom de domaine, mais il persite encore une erreur : il est en http. 
+
+📷❗️❗️  image de http  ❗️❗️📷
+<img src="" />
+
+Ce qui veut dire que l'internet portocol n'est pas sécurisé.
+Pour résoudre ce problème, on peut mettre en place un certificat SSL auto-signé.
+Un certificat SSL, déjà, est un fichier qui lie une clé de cryptage à un serveur dans le but de chiffrer, et donc protéger les données qui passent entre le serveur et le client.
+Le certificat SSL utilise la Cryptographie Asymétrique, c'est à dire un cryptographie qui se base sur une clé privée et une clé publique comme sur le schéma si dessous :
+
+📷❗️❗️  image de cryptage asymétrique 1 ❗️❗️📷
+<img src="" />
+
+Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
+
+📷❗️❗️  image de cryptage asymétrique 2 ❗️❗️📷
+<img src="" />
+
+L'envoyeur transmet donc les données cryptées par la clé publique au receveur, et celui ci est le seul à pouvoir les déchiffrer car il est le seul à détenir la clé privée.
+Ainsi, de la même manière, le serveur crypte les données reçu et envoyé à ses clients pour garantir la sécurité de la transmission de données.
+
+⚠️ Ceci est le principe d'un certificat SSL, en pratique les certificats SSL sont sencés être aquis auprès d'authorités de sécurité reconnues. Ce que nous allons mettre en place pour ce TP est un certificat auto-signé, à savoir une implémentation local, non vérifié par une authorités de sécurité, et donc non reconnu !
+
+Pour implémenter un certificat SSL auto-signé :
 
 
 
