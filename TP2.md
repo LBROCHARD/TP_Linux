@@ -142,7 +142,17 @@ Le certificat SSL utilise la Cryptographie Asymétrique, c'est à dire un crypto
 📷❗️❗️  image de cryptage asymétrique 1 ❗️❗️📷
 <img src="" />
 
-Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée. En claire, elle crypte les données 
+Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
+
+📷❗️❗️  image de cryptage asymétrique 2 ❗️❗️📷
+<img src="" />
+
+L'envoyeur transmet donc les données cryptées par la clé publique au receveur, et celui ci est le seul à pouvoir les déchiffrer car il est le seul à détenir la clé privée.
+Ainsi, de la même manière, le serveur crypte les données reçu et envoyé à ses clients pour garantir la sécurité de la transmission de données.
+
+⚠️ Ceci est le principe d'un certificat SSL, en pratique les certificats SSL sont sencés être aquis auprès d'authorités de sécurité reconnues. Ce que nous allons mettre en place pour ce TP est un certificat auto-signé, à savoir une implémentation local, non vérifié par une authorités de sécurité, et donc non reconnu !
+
+Pour implémenter un certificat SSL auto-signé :
 
 
 
