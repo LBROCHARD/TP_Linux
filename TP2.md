@@ -149,7 +149,7 @@ Le certificat SSL utilise la Cryptographie Asymétrique, c'est à dire un crypto
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20cryptage%20part%201%20.png" />
 
-Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
+Pour transmettre des données cryptés il faut donc une clé privée (verte) et une clé publique (rouge), qu'on utilise comme ceci : Le receveur (en violet) transmet à l'envoyeur (en vert) sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20cryptage%20part%202%20.png" />
 
