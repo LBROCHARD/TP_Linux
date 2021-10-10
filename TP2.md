@@ -158,10 +158,51 @@ Ainsi, de la même manière, le serveur crypte les données reçu et envoyé à 
 
 ⚠️ Ceci est le principe d'un certificat SSL, en pratique les certificats SSL sont sencés être aquis auprès d'authorités de sécurité reconnues. Ce que nous allons mettre en place pour ce TP est un certificat auto-signé, à savoir une implémentation local, non vérifié par une authorités de sécurité, et donc non reconnu !
 
-Pour implémenter un certificat SSL auto-signé :
+Pour implémenter un certificat SSL auto-signé la première étape est d'activer *mod ssl* qui est une fonctionalité d'apache qui permet de crypter des données. Pour l'activer on utilise la commande `sudo a2enmod ssl`.
+Juste après, on redemarre apache avec `sudo systemctl restart apache2`.
+Le module mod_ssl est maintenant activé et prêt à l'emploi !
 
+Maintenant, nous allons générer un nouveau certificat SSL. 
+Ce certificat mettera en place les clés publiques et privées utilisées pour crypter les données.
+Pour créer les fichiers de clés, on utilisa la commande : `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`.
 
+Cette commande contient de nombreuses informations que je vais essayer d'expliquer au mieux :
 
+- Tout d'abord, *openssl* est un outils slibre qui nous permet de créer des clés dans le but de crypter nos données (comme expliqué plus haut).
+- *req -x509* correspond au type de format de clé que l'on souhaite créer, ici, le format X509 est un le format le plus utilisé pour le SSL.
+- *-nodes* permet à apache d'acceder à cette clé sans accord de l'utilisateur.
+- *-days 365* correspond au temps durant lequel ce certificat sera valide. En effet, pour que les certificats soient changées régulierements (dans un soucis de sécurité), la plupart des navigateurs ne reconaissent pas les certificat dont la periode de validité est supérieur à un an (soit 365 jours).
+- *-newkey rsa:2048* permet de créer à cette étape une clé RSA de 2048 bits (il s'agit d'une option car la clé aurait pu être créée dans une étape précédente.
+- *-keyout* correspond à l'emplacement de la clé que nous sommes en train de créer.
+- et *-out* est l'emplacement ou sera placé le certificat que nous sommes en train de créer.
+
+Suite à cela, il vous est demandé de renseigner certaines information à propos du site :
+
+- le *Country Name*, initiales du pays d'hebergement (ici "FR").
+- *State or Province Name* nom de l'état ou du département (ici "Haute-Garonne").
+- *Locality Name* nom de la ville (ici "Toulouse").
+- *Organization Name* nom de l'organisation (ici "InforM").
+- *Organizational Unit Name* département de l'organisation (ici "." pour laisser blanc).
+- *Common Name* il s'agit de votre adress IP, ou (et comme c'est le cas ici) du nom nom de votre domaine. ⚠️attention celui-ci est important car il peut apporter de nombreux problèmes de sécurité en cas d'erreur ! (ici "test").
+- *Email Address* correspond à l'adress d'un modérateur du serveur, elle permet de contacter un responsable en cas d'erreur (ici laissé blanc dans le cadre du TP).
+ 
+⚠️ tout ce qui a été remplis avec le *ici* correspond au information entrés dans le cadre du TP ! Dans un cadre proffesionnel il ne s'agit pas forcément des mêmes valeurs.
+
+On vas maintenant mettre à jour notre fichier de configuration avec la commande `sudo nano /etc/apache2/sites-availabe/01-www.test.com.conf` et y rajouter les lignes suivantes : 
+
+<pre>
+<code>
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+</code>
+</pre>
+
+Et remplacer le *80* de `<VirtualHost *:80>` en *443*.
+
+Cela devrait nous procurer le résultat suivant :
+
+📷❗️❗️  image du nouveau .conf  ❗️❗️📷
 
 
 
