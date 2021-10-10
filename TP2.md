@@ -19,7 +19,7 @@
 
 ### [Mise en place d'un certificat SSL](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-certificat-ssl-1)
 
-### [.]()
+### [Configuration d'une solution de haute disponibilité]()
 
 ### [Conclusion]()
 
@@ -159,6 +159,16 @@ Ainsi, de la même manière, le serveur crypte les données reçu et envoyé à 
 ⚠️ Ceci est le principe d'un certificat SSL, en pratique les certificats SSL sont sencés être aquis auprès d'authorités de sécurité reconnues. Ce que nous allons mettre en place pour ce TP est un certificat auto-signé, à savoir une implémentation local, non vérifié par une authorités de sécurité, et donc non reconnu !
 
 Pour implémenter un certificat SSL auto-signé :
+
+
+
+
+
+
+
+## Configuration d'une solution de haute disponibilité
+
+
 
 
 
