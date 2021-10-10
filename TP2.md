@@ -19,9 +19,9 @@
 
 ### [Mise en place d'un certificat SSL](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-certificat-ssl-1)
 
-### [Configuration d'une solution de haute disponibilité]()
+### [Configuration d'une solution de haute disponibilité](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dune-solution-de-haute-disponibilit%C3%A9-1)
 
-### [Conclusion]()
+### [Conclusion](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#conclusion-1)
 
 
 
