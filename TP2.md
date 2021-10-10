@@ -204,6 +204,8 @@ Cela devrait nous procurer le résultat suivant :
 
 📷❗️❗️  image du nouveau .conf  ❗️❗️📷
 
+On relance apache : `sudo systemctl reload apache2`.
+
 
 
 
