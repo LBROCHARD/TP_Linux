@@ -1,8 +1,7 @@
-# TP2
+# Linux TP n°2
 
-📷 ⚠️ ❗️❗️ 
 
-📷❗️❗️  image de linux tp2  ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/linux2.png" />width="500"
 
 
 ## Sommaire
@@ -106,9 +105,6 @@ Dorénavant, si l'on ouvre un navigateur internet dans lequel on renseigne `loca
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/5localhost.png" width="500"/>
 
 
-❗️❗️comment on aurait put le sécuriser plus
-
-
 ## Mise en place d'un DNS
 
 On peut acceder à notre site, c'est bien, mais maintenant, si on veut pouvoir y acceder depuis un nom de domaine, il faut configurer un DNS.
@@ -133,8 +129,6 @@ Dorénavant, si l'on vas sur un navigateur web et que l'on rentre dans la barre 
 Tout ceci bien sûr grâce au DNS local que nous venons de configurer, il lie en effet le nom de domaine "test" avec notre propre adress IP, il redirige donc le navigateur vers notre machine pour y trouver le site.
 
 ⚠️ Mais attention, il ne s'agit que de l'utilisation d'un DNS en local, si quelqu'un sur un autre post, essaye de rejoindre notre site en rentrant "test" dans son navigateur, cela ne fonctionnera pas, et il tombera probablement sur un autre site. En effet, pour que le DNS focntionne partout, il faut réserver un nom de domaine, pour qu'un nom ne puisse diriger que vers un seul site. Le problème, c'est que réserver un nom de dommaine est payant et donc, ce n'est donc pas faisable pour un TP, mais pour un site d'entreprise, il est très important de réserver son nom de domaine.
-
-❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
 
 
 ## Mise en place d'un certificat SSL
@@ -217,16 +211,29 @@ Le certificat SSL auto-signé est donc fonctionnel !
 
 ⚠️ Attention tout de même ! Cette méthode ne fonctione que pour les TP, en effet, on peut voir que les navigateurs mettent en garde contre les certificat autosignés, donc cette solution ne fonctionnera pas en entreprise.
 
+
+
 ## Configuration d'une solution de haute disponibilité
 
+La Haute Disponibilité (ou HA) consiste à mettre en place des outils pour assurer la disponibilité d'un serveurs le plus souvent possible. En effet parfois, il est important que le serveur reste acessible, et il faut donc prévoir des solutions pour contrer les eventuels problèmes.
 
+La première de ses solution en HA consiste en la Répartition des Charges (ou Load Balancing). Elle consiste à rediriger les requettes des internautes vers un serveur moins surchargé afin d'enlever de la charge au premier serveur et donc éviter des potentiels erreurs. Mais cette solution s'applique à de grands serveurs, avec de nombreux sous-serveurs capable de s'occupper d'une requette, et cette solution est dificilement envisagable dans ce TP.
 
+La deuxième solution est ce qu'on apelle la Tolérance aux Pannes (FailOver) qui consiste à configurer un second serveur, qui surveille en permanance le serveur principal, et qui peut s'activer si le premier ne fonctionne plus, dans le but de prendre ça place. Ainsi, si le premier serveur ne fonctionne plus, le second prend sa place le temps qu'on règle les soucis sur le premier. Cela peut être très pratique pour eviter les pannes ou autres erreurs.
 
+La Tolérance aux Pannes est la méthode à adopter dans le cadre de ce TP, Pour ce faire, on peut utiliser les outils *Corosync* et *Peacemaker*. 
+Corosync est un logiciel qui communiquera entre les 2 serveur et qui permettera de détecter si le premier serveur ne fonctionne plus. 
+Peacemaker quant à lui est un logiciel de gestion de ressources, il pourra donc arreter ou relancer les services du serveur "de secours" en cas de besoin.
+
+Il faudra donc mettre en place une seconde machine virtuelle avec une copie du serveur, et installer les outils Corosync et Peacemaker sur les machines.
 
 
 ## Conclusion
 
-En conclusion.
+En conclusion, rapatrier ses serveur ne consiste pas uniquement à configurer un server, car il faut également prendre en compte la publication du site, son accéssiblité grâce au DNS, sa sécurité grâce au certificat SSL et son maintien grâce à la Haute Disponibilité.
 
+Ce TP nous aura fait prendre connaissance de tout les outils à mettre en place durant la configuration d'un serveur, ainsi que comment les installer et utiliser. 
+
+En axes d'amélioration, j'aurais probablement dut parler un petit peu plus de toutes les solutions qui auraient dut être mises en place au seins d'une entreprise plutot que de me contenter de simplement écrire que ce que nous fesions dans le cadre d'un TP n'était pas suffisant. Je regrette également de n'avoir pas pu terminer l'intallation de la Haute disponibilité.
 
 Voilà..[.](https://medicamentfinal.com/se-suicider-sans-douleur/)
