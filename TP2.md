@@ -9,19 +9,20 @@
 
 
 
-### [Introduction](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#introduction-1)
+- ### [Introduction](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#introduction-1)
 
-### [Installation des Machines Virtuels](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#installation-des-machines-virtuels-1)
+- ### [Installation des Machines Virtuels](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#installation-des-machines-virtuels-1)
 
-### [Configuration d'un site web avec apache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dun-site-web-avec-apache-1)
+- ### [Configuration d'un site web avec apache](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dun-site-web-avec-apache-1)
 
-### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
+- ### [Mise en place d'un DNS](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-dns-1)
 
-### [Mise en place d'un certificat SSL]()
+- ### [Mise en place d'un certificat SSL](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#mise-en-place-dun-certificat-ssl-1)
 
-### [.]()
+- ### [Configuration d'une solution de haute disponibilité](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#configuration-dune-solution-de-haute-disponibilit%C3%A9-1)
 
-### [Conclusion]()
+- ### [Conclusion](https://github.com/LBROCHARD/TP_Linux/blob/main/TP2.md#conclusion-1)
+
 
 
 
@@ -30,7 +31,8 @@
 ![](https://github.com/LBROCHARD/TP_Linux/blob/main/images/002%20infoM.png)
 
 Suite à un incendie dans la société qui hébergait le site web de la société inforM, cette dernière à décidée d'héberger elle même son site web.
-Pour ce faire, nous allons mettre en place un hébergement de serveur web avec Apache.
+Pour ce faire, nous allons mettre en place un hébergement de serveur web avec Apache, puis configurer un DNS, et mettre en place un certificat SSl.
+
 
 
 ## Installation des Machines Virtuels
@@ -45,7 +47,7 @@ La Machine virtuelle Debian 11 :
 
 ## Configuration d'un site web avec apache
 
-Pour mettre en place notre serveur web, nous allons utiliser Apache HTTP serveur (que nous allons surnomer Apache). 
+Pour mettre en place notre serveur web, nous allons utiliser Apache HTTP serveur (que nous allons simplement nommer Apache). 
 Apache est un logiciel libre développé par la fondation du même nom, est un serveur HTTP, ce qui veut dire, un serveur informatique capable de répondre à des requettes Web.
 Apache étant libre et l'un des serveur HTTP les plus utilisé du marché, il est parfaitement indiqué de l'utilisé pour ce TP.
 
@@ -124,6 +126,14 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/11%20hosts%20new%20hosts.png" width="500"/>
 
+Dorénavant, si l'on vas sur un navigateur web et que l'on rentre dans la barre de recherche le nom de notre site, il apparait ! 
+
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/8test%20bonsoir%20site%20web.png" width="500"/>
+
+Tout ceci bien sûr grâce au DNS local que nous venons de configurer, il lie en effet le nom de domaine "test" avec notre propre adress IP, il redirige donc le navigateur vers notre machine pour y trouver le site.
+
+⚠️ Mais attention, il ne s'agit que de l'utilisation d'un DNS en local, si quelqu'un sur un autre post, essaye de rejoindre notre site en rentrant "test" dans son navigateur, cela ne fonctionnera pas, et il tombera probablement sur un autre site. En effet, pour que le DNS focntionne partout, il faut réserver un nom de domaine, pour qu'un nom ne puisse diriger que vers un seul site. Le problème, c'est que réserver un nom de dommaine est payant et donc, ce n'est donc pas faisable pour un TP, mais pour un site d'entreprise, il est très important de réserver son nom de domaine.
+
 ❗️❗️ parler de comment on aurait fait pour le faire hors de juste ce PC
 
 
@@ -131,28 +141,78 @@ Et ajoutez une nouvelle ligne où vous ajouter votre adress IP suivie du nom de 
 
 Notre site est donc mis en place, accéssible en local par son nom de domaine, mais il persite encore une erreur : il est en http. 
 
-📷❗️❗️  image de http  ❗️❗️📷
-<img src="" />
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20non%20https.png" />
 
 Ce qui veut dire que l'internet portocol n'est pas sécurisé.
 Pour résoudre ce problème, on peut mettre en place un certificat SSL auto-signé.
 Un certificat SSL, déjà, est un fichier qui lie une clé de cryptage à un serveur dans le but de chiffrer, et donc protéger les données qui passent entre le serveur et le client.
 Le certificat SSL utilise la Cryptographie Asymétrique, c'est à dire un cryptographie qui se base sur une clé privée et une clé publique comme sur le schéma si dessous :
 
-📷❗️❗️  image de cryptage asymétrique 1 ❗️❗️📷
-<img src="" />
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20cryptage%20part%201%20.png" />
 
-Pour transmettre des données cryptés il faut donc une clé privée et une clé publique, qu'on utilise comme ceci : Le receveur transmet à l'envoyeur sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
+Pour transmettre des données cryptés il faut donc une clé privée (verte) et une clé publique (rouge), qu'on utilise comme ceci : Le receveur (en violet) transmet à l'envoyeur (en vert) sa clé publique, que n'importe qui peut obtenir sans que cela affècte la sécurité. Cette clé, permet de chiffrer des données de manière à ce qu'elle ne soient déchifrable qu'avec la clé privée.
 
-📷❗️❗️  image de cryptage asymétrique 2 ❗️❗️📷
-<img src="" />
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20cryptage%20part%202%20.png" />
 
 L'envoyeur transmet donc les données cryptées par la clé publique au receveur, et celui ci est le seul à pouvoir les déchiffrer car il est le seul à détenir la clé privée.
 Ainsi, de la même manière, le serveur crypte les données reçu et envoyé à ses clients pour garantir la sécurité de la transmission de données.
 
 ⚠️ Ceci est le principe d'un certificat SSL, en pratique les certificats SSL sont sencés être aquis auprès d'authorités de sécurité reconnues. Ce que nous allons mettre en place pour ce TP est un certificat auto-signé, à savoir une implémentation local, non vérifié par une authorités de sécurité, et donc non reconnu !
 
-Pour implémenter un certificat SSL auto-signé :
+Pour implémenter un certificat SSL auto-signé la première étape est d'activer *mod ssl* qui est une fonctionalité d'apache qui permet de crypter des données. Pour l'activer on utilise la commande `sudo a2enmod ssl`.
+Juste après, on redemarre apache avec `sudo systemctl restart apache2`.
+Le module mod_ssl est maintenant activé et prêt à l'emploi !
+
+Maintenant, nous allons générer un nouveau certificat SSL. 
+Ce certificat mettera en place les clés publiques et privées utilisées pour crypter les données.
+Pour créer les fichiers de clés, on utilisa la commande : `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`.
+
+Cette commande contient de nombreuses informations que je vais essayer d'expliquer au mieux :
+
+- Tout d'abord, *openssl* est un outils slibre qui nous permet de créer des clés dans le but de crypter nos données (comme expliqué plus haut).
+- *req -x509* correspond au type de format de clé que l'on souhaite créer, ici, le format X509 est un le format le plus utilisé pour le SSL.
+- *-nodes* permet à apache d'acceder à cette clé sans accord de l'utilisateur.
+- *-days 365* correspond au temps durant lequel ce certificat sera valide. En effet, pour que les certificats soient changées régulierements (dans un soucis de sécurité), la plupart des navigateurs ne reconaissent pas les certificat dont la periode de validité est supérieur à un an (soit 365 jours).
+- *-newkey rsa:2048* permet de créer à cette étape une clé RSA de 2048 bits (il s'agit d'une option car la clé aurait pu être créée dans une étape précédente.
+- *-keyout* correspond à l'emplacement de la clé que nous sommes en train de créer.
+- et *-out* est l'emplacement ou sera placé le certificat que nous sommes en train de créer.
+
+Suite à cela, il vous est demandé de renseigner certaines information à propos du site :
+
+- le *Country Name*, initiales du pays d'hebergement (ici "FR").
+- *State or Province Name* nom de l'état ou du département (ici "Haute-Garonne").
+- *Locality Name* nom de la ville (ici "Toulouse").
+- *Organization Name* nom de l'organisation (ici "InforM").
+- *Organizational Unit Name* département de l'organisation (ici "." pour laisser blanc).
+- *Common Name* il s'agit de votre adress IP, ou (et comme c'est le cas ici) du nom nom de votre domaine. ⚠️attention celui-ci est important car il peut apporter de nombreux problèmes de sécurité en cas d'erreur ! (ici "test").
+- *Email Address* correspond à l'adress d'un modérateur du serveur, elle permet de contacter un responsable en cas d'erreur (ici laissé blanc dans le cadre du TP).
+ 
+⚠️ tout ce qui a été remplis avec le *ici* correspond au information entrés dans le cadre du TP ! Dans un cadre proffesionnel il ne s'agit pas forcément des mêmes valeurs.
+
+On vas maintenant mettre à jour notre fichier de configuration avec la commande `sudo nano /etc/apache2/sites-availabe/01-www.test.com.conf` et y rajouter les lignes suivantes : 
+
+<pre>
+<code>
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+</code>
+</pre>
+
+Et remplacer le *80* de `<VirtualHost *:80>` en *443*.
+
+Cela devrait nous procurer le résultat suivant :
+
+📷❗️❗️  image du nouveau .conf  ❗️❗️📷
+
+On relance apache : `sudo systemctl reload apache2`.
+
+
+
+
+## Configuration d'une solution de haute disponibilité
+
+
 
 
 
