@@ -203,7 +203,7 @@ Et remplacer le *80* de `<VirtualHost *:80>` en *443*.
 
 Cela devrait nous procurer le résultat suivant :
 
-📷❗️❗️  image du nouveau .conf  ❗️❗️📷
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%202%20new%20.conf.png" width="500"/>
 
 On relance apache : `sudo systemctl reload apache2`.
 
