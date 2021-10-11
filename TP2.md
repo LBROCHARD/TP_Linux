@@ -184,7 +184,7 @@ Suite à cela, il vous est demandé de renseigner certaines information à propo
 - *Locality Name* nom de la ville (ici "Toulouse").
 - *Organization Name* nom de l'organisation (ici "InforM").
 - *Organizational Unit Name* département de l'organisation (ici "." pour laisser blanc).
-- *Common Name* il s'agit de votre adress IP, ou (et comme c'est le cas ici) du nom nom de votre domaine. ⚠️attention celui-ci est important car il peut apporter de nombreux problèmes de sécurité en cas d'erreur ! (ici "test").
+- *Common Name* il s'agit de votre adress IP, ou (et comme c'est le cas ici) du nom nom de votre domaine. ⚠️attention celui-ci est important car il peut apporter de nombreux problèmes de sécurité en cas d'erreur ! (ici "www.test.com").
 - *Email Address* correspond à l'adress d'un modérateur du serveur, elle permet de contacter un responsable en cas d'erreur (ici laissé blanc dans le cadre du TP).
  
 ⚠️ tout ce qui a été remplis avec le *ici* correspond au information entrés dans le cadre du TP ! Dans un cadre proffesionnel il ne s'agit pas forcément des mêmes valeurs.
@@ -205,10 +205,17 @@ Cela devrait nous procurer le résultat suivant :
 
 <img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%202%20new%20.conf.png" width="500"/>
 
-On relance apache : `sudo systemctl reload apache2`.
+On relance apache : `sudo systemctl reload apache2`. On se rend sur `https://test` et le message suivant apparait : 
 
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20https%20attention.png" width="500"/> 
 
+On clique sur *Avancé* puis *Continuer quand même* et on arrive enfin sur notre page, fonctionnelle, en https !
 
+<img src="https://github.com/LBROCHARD/TP_Linux/blob/main/images2/ssl%20https%20qui%20marche.png" width="500"/>
+
+Le certificat SSL auto-signé est donc fonctionnel !
+
+⚠️ Attention tout de même ! Cette méthode ne fonctione que pour les TP, en effet, on peut voir que les navigateurs mettent en garde contre les certificat autosignés, donc cette solution ne fonctionnera pas en entreprise.
 
 ## Configuration d'une solution de haute disponibilité
 
